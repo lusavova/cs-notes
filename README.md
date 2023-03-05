@@ -1,6 +1,4 @@
-# Testing
-
-Everything I learned about testing from Martin Fowler
+# Everything you need to know about testing
 
 Testing is an **essential part of software development** that helps ensure that the code being produced is reliable, performs well, and meets the needs of users.
 However it is often overlooked or undervalued. Many developers view testing as a time-consuming and unnecessary chore, preferring to focus their efforts on writing new code or implementing new features. However, this approach can lead to significant problems down the line, such as various bugs, performance issues, or security vulnerabilities. In contrast, a robust testing strategy can help ensure that the software being produced is reliable, efficient, and secure, and can help prevent these types of issues from arising.
@@ -26,6 +24,22 @@ However, it's important to note that self-testing code is not a substitute for i
 Finally the heart of self-testing code is building a where developers are naturally thinking about writing code and tests together!!!
 
 
+## Test Pyramid
 
+The Test Pyramid is a way of thinking about different levels of testing and how they should be prioritized. The goal is to have a balance of testing at each layer so that you are catching as many bugs as possible with the least amount of effort. The cost and complexity of testing increases as you move up the pyramid.
 
+![image](https://user-images.githubusercontent.com/33388710/222957473-385a3011-dcb1-4c5f-a7a4-12da65d5790e.png)
+
+The pyramid is divided into three layers: Unit Tests, Service Tests, and UI Tests.
+
+**Unit Tests:**
+- automated tests that check individual functions or modules in the code. They should be the largest and most foundational layer of the pyramid, covering the majority of the codebase.
+
+**Service Tests:**
+- automated tests that check the interfaces between different modules or services. They sit in the middle of the pyramid, covering the integration points between different parts of the system.
+
+**UI Tests:** 
+- automated tests that simulate user interactions with the system, checking the behavior of the system as a whole. They should be the smallest and highest layer of the pyramid, covering only the critical user workflows.
+
+The pyramid structure is important because it ensures that the majority of tests are fast, cheap, and reliable. Unit tests provide fast feedback on code changes, while service tests catch integration errors early. UI tests, while necessary, are slower and more brittle, and should be used sparingly to avoid slowing down the entire testing process. Test Pyramid provides a framework for thinking about testing strategies in a way that maximizes efficiency, speed, and reliability, while minimizing the time and effort required to test a system.
 
